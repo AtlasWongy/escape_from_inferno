@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private PlayerInputActions playerInputActions;
+    private Vector2 moveDirection;
     [SerializeField]
     float speed = 5;
     
@@ -14,12 +15,24 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
-        Debug.Log("I am awake!");
+    }
+
+    public void Update() {
+        ProcessInputs();
     }
 
     public void FixedUpdate() {
+        Move();
+    }
+
+    public void ProcessInputs() {
         Vector2 inputVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
         Debug.Log(inputVector);
-        rb.AddForce(new Vector2(inputVector.x, inputVector.y) * speed, ForceMode2D.Force);
+        // rb.AddForce(new Vector2(inputVector.x, inputVector.y) * speed);
+        moveDirection = new Vector2(inputVector.x, inputVector.y);
+    }
+
+    public void Move() {
+        rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
     }
 }
