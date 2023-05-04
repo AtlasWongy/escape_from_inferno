@@ -5,6 +5,8 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
+TextMesh*Pro/
+Ink/
 
 .vs/
 
@@ -44,3 +46,4 @@ crashlytics-build.properties
 
 [Aa]ssets/[Ss]treamingAssets/aa.meta
 [Aa]ssets/[Ss]treamingAssets/aa/*
+[Aa]ssets/[Tt]extMeshPro/

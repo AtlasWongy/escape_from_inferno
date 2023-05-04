@@ -6,15 +6,12 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private PlayerInputActions playerInputActions;
     private Vector2 moveDirection;
     [SerializeField]
     float speed = 5;
     
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
-        playerInputActions = new PlayerInputActions();
-        playerInputActions.Player.Enable();
     }
 
     public void Update() {
@@ -22,13 +19,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void FixedUpdate() {
+
+        if (DialogueManager.GetInstance().dialogueIsPlaying) {
+            return;
+        }
         Move();
     }
 
     public void ProcessInputs() {
-        Vector2 inputVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
-        Debug.Log(inputVector);
-        // rb.AddForce(new Vector2(inputVector.x, inputVector.y) * speed);
+        Vector2 inputVector = InputManager.GetInstance().GetMoveDirection();
         moveDirection = new Vector2(inputVector.x, inputVector.y);
     }
 
