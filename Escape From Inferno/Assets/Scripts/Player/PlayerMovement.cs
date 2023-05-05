@@ -7,31 +7,36 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 moveDirection;
-    [SerializeField]
-    float speed = 5;
-    
-    private void Awake() {
+    [SerializeField] float speed = 5;
+
+    private void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Update() {
+    public void Update()
+    {
         ProcessInputs();
     }
 
-    public void FixedUpdate() {
-
-        if (DialogueManager.GetInstance().dialogueIsPlaying) {
+    public void FixedUpdate()
+    {
+        if (Dialogue.DialogueManager.GetInstance().dialogueIsPlaying)
+        {
             return;
         }
+
         Move();
     }
 
-    public void ProcessInputs() {
+    public void ProcessInputs()
+    {
         Vector2 inputVector = InputManager.GetInstance().GetMoveDirection();
         moveDirection = new Vector2(inputVector.x, inputVector.y);
     }
 
-    public void Move() {
+    public void Move()
+    {
         rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
     }
 }
