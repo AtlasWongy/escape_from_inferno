@@ -31,7 +31,6 @@ namespace Inventory
             for (int i = 0; i < inventoryObject.transform.GetChild(0).childCount; i++)
             {
                 Transform slot = inventoryObject.transform.GetChild(0).GetChild(i);
-                // Debug.Log($"The Icon name : {slot.GetChild(0)}");
                 inventorySlots[i] = slot.GetChild(0).transform.GetComponent<Image>();
             }
         }
@@ -64,7 +63,15 @@ namespace Inventory
         public void UpdateInventory(Image[] newInventorySlots)
         {
             inventorySlots = newInventorySlots;
-            Debug.Log($"There is a new item added: {inventorySlots[0].sprite}");
+            foreach (Image item in inventorySlots)
+            {
+                if (item.sprite != null)
+                {
+                    Color originalColor = item.color;
+                    float newAlpha = 1.0f;
+                    item.color = new Color(originalColor.r, originalColor.g, originalColor.b, newAlpha);
+                }
+            }
         }
     }
 }

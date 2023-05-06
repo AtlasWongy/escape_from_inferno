@@ -21,6 +21,7 @@ namespace Dialogue
         private Story currentStory;
         public bool dialogueIsPlaying { get; private set; }
         public string currentChoice { get; private set; }
+        public GameObject dialogueStarter { get; private set; }
 
         private void Awake()
         {
@@ -64,11 +65,12 @@ namespace Dialogue
             }
         }
 
-        public void EnterDialogueMode(TextAsset inkJSON)
+        public void EnterDialogueMode(TextAsset inkJSON, GameObject dialogueTriggerer)
         {
             currentStory = new Story(inkJSON.text);
             dialogueIsPlaying = true;
             dialoguePanel.SetActive(true);
+            dialogueStarter = dialogueTriggerer;
 
             ContinueStory();
         }
@@ -79,6 +81,7 @@ namespace Dialogue
             dialoguePanel.SetActive(false);
             dialogueText.text = "";
             currentChoice = "";
+            dialogueStarter = null;
         }
 
         private void ContinueStory()

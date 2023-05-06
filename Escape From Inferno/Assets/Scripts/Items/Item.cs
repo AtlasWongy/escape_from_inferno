@@ -31,11 +31,7 @@ namespace Items
                 if (item.sprite == null)
                 {
                     item.sprite = itemSprite;
-
-                    // Color originalColor = item.color;
-                    // float newAlpha = 1.0f;
-                    // item.color = new Color(originalColor.r, originalColor.g, originalColor.b, newAlpha);
-
+                    break;
                 }
             }
             Debug.Log($"The new sprite is added before sending to manager: {items[0].sprite}");

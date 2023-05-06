@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 namespace Dialogue
 {
-
     public class DialogueTrigger : MonoBehaviour
     {
         [Header("Visual Cue")] [SerializeField]
@@ -13,11 +12,14 @@ namespace Dialogue
 
         [Header("Ink JSON")] [SerializeField] private TextAsset inkJSON;
         private bool playerInRange;
+        
+        private GameObject _gameObject;
 
         private void Awake()
         {
             playerInRange = false;
             visualCue.SetActive(false);
+            _gameObject = transform.parent.gameObject;
         }
 
         private void Update()
@@ -27,7 +29,7 @@ namespace Dialogue
                 visualCue.SetActive(true);
                 if (InputManager.GetInstance().GetInteractPressed())
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON, _gameObject);
                 }
             }
             else
