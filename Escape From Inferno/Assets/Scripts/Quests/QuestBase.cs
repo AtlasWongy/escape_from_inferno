@@ -11,5 +11,12 @@ namespace Quests
         public string questProvider;
         public string questDescription;
         public bool objectiveComplete = false;
+        public QuestType questType;
+    }
+
+    public enum QuestType
+    {
+        Fetch,
+        Other
     }
 }

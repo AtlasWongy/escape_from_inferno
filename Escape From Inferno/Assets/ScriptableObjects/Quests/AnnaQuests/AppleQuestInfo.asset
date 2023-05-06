@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: AppleQuestInfo
   m_EditorClassIdentifier: 
   questID: 1
+  questProvider: Anna
   questDescription: Give Anna an apple
   objectiveComplete: 0
+  questType: 0

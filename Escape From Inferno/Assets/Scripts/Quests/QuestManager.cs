@@ -38,7 +38,6 @@ namespace Quests
 
         private void AcceptQuest(Quest newQuest)
         {
-            Debug.Log($"The quest object is empty? {newQuest}");
             questLists.Add(newQuest);
         }
     }

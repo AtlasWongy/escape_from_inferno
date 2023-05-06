@@ -12,20 +12,23 @@ namespace Quests
         public string questDesc { get; private set; }
         public string questProvider { get; private set; }
         public bool objectiveCompleted { get; private set; }
+        public QuestType questType { get; private set; }
+        private GameObject requiredItem;
 
-        private void Start()
+        private void Awake()
         {
             questID = quest.questID;
             questDesc = quest.questDescription;
             questProvider = quest.questProvider;
             objectiveCompleted = quest.objectiveComplete;
+            questType = quest.questType;
         }
 
-        private void Update()
+        private void Start()
         {
-            if (objectiveCompleted)
+            if (questType == QuestType.Fetch)
             {
-                Debug.Log("Quest is completed!");
+                requiredItem = null;
             }
         }
     }

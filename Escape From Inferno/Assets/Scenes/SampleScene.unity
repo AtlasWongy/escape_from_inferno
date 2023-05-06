@@ -1373,7 +1373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1004278011}
-  inkJSON: {fileID: 4900000, guid: bf9bb262370a1834fbea5b7b4b510885, type: 3}
+  inkJSON: []
 --- !u!58 &642810350
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1865,7 +1865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 679538622}
-  inkJSON: {fileID: 4900000, guid: 233facc8b3c25be41bbd63146d97d968, type: 3}
+  inkJSON:
+  - {fileID: 4900000, guid: 233facc8b3c25be41bbd63146d97d968, type: 3}
+  - {fileID: 4900000, guid: 3aa511e2e5c6ec1468e7b246644eac75, type: 3}
 --- !u!61 &742408881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -69628,7 +69630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1000674894}
-  inkJSON: {fileID: 4900000, guid: e73e80478fd3e614ab28a7b146e3cecd, type: 3}
+  inkJSON: []
 --- !u!58 &1971893618
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -10,9 +10,10 @@ namespace Dialogue
         [Header("Visual Cue")] [SerializeField]
         private GameObject visualCue;
 
-        [Header("Ink JSON")] [SerializeField] private TextAsset inkJSON;
+        [Header("Ink JSON")] [SerializeField] private TextAsset[] inkJSON;
         private bool playerInRange;
-        
+        private int indexStory;
+
         private GameObject _gameObject;
 
         private void Awake()
@@ -20,6 +21,7 @@ namespace Dialogue
             playerInRange = false;
             visualCue.SetActive(false);
             _gameObject = transform.parent.gameObject;
+            indexStory = 0;
         }
 
         private void Update()
@@ -29,7 +31,7 @@ namespace Dialogue
                 visualCue.SetActive(true);
                 if (InputManager.GetInstance().GetInteractPressed())
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON, _gameObject);
+                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON[indexStory], _gameObject);
                 }
             }
             else
@@ -52,6 +54,11 @@ namespace Dialogue
             {
                 playerInRange = false;
             }
+        }
+
+        public void RemoveCurrentDialogue()
+        {
+            if (indexStory < inkJSON.Length) indexStory++;
         }
     }
 }

@@ -81,6 +81,7 @@ namespace Dialogue
             dialoguePanel.SetActive(false);
             dialogueText.text = "";
             currentChoice = "";
+            dialogueStarter.GetComponentInChildren<DialogueTrigger>().RemoveCurrentDialogue();
             dialogueStarter = null;
         }
 
