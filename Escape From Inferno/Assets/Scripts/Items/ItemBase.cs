@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Items
 {
@@ -8,5 +9,7 @@ namespace Items
     public class ItemBase : ScriptableObject
     {
         public string itemName;
+        public Sprite itemSprite;
+
     }
 }
