@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0a65b68f-3a99-4d77-bdb7-6688a8815b77" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Escape From Inferno/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Escape From Inferno/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quests/Quest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quests/Quest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quests/QuestBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quests/QuestBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quests/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quests/QuestManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/32x32.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/32x32.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Palette/Beach.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Palette/Beach.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Rule Tiles/Beach Rule Tile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Rule Tiles/Beach Rule Tile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Quests/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Quests/GameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Quests/Quest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RuleTile/Sample.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2PMoN1rxzh7RtEOhtl1EF8yp4AU" />
   <component name="ProjectViewState">
@@ -96,7 +101,7 @@
       <workItem from="1683276270010" duration="35000" />
       <workItem from="1683276330048" duration="9676000" />
       <workItem from="1683288204236" duration="14937000" />
-      <workItem from="1683378919971" duration="5310000" />
+      <workItem from="1683378919971" duration="17578000" />
     </task>
     <servers />
   </component>
